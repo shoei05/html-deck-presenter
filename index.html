@@ -1,4 +1,4 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>HTMLスライドの見本</title><style>:root{--ink:#222428;--purple:#333740;--magenta:#c5487b;--pale:#f4f4f5;--line:#d9dbe0;--muted:#5f636b;--green:#17734e;--amber:#9b6600}
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet"><title>HTMLスライドの見本</title><style>:root{--ink:#222428;--purple:#333740;--magenta:#c5487b;--pale:#f4f4f5;--line:#d9dbe0;--muted:#5f636b;--green:#17734e;--amber:#9b6600}
 *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden}
 body{background:#12101d;color:var(--ink);font-family:"BIZ UDPGothic","Yu Gothic","Hiragino Kaku Gothic ProN",sans-serif}
 #stage{position:fixed;inset:0;display:grid;place-items:center;overflow:hidden}
@@ -31,7 +31,7 @@ body{background:#12101d;color:var(--ink);font-family:"BIZ UDPGothic","Yu Gothic"
 .three-t td.b{width:30%;text-align:center;color:#fff;font-size:54px}.three-t td{font-size:54px;padding:30px 28px}.ok{background:var(--green)}.warn{background:var(--amber)}.ng{background:var(--magenta)}
 /* flow */
 .flow{display:flex;align-items:stretch;gap:14px;margin:6px 0 40px}.step{flex:1;display:grid;place-items:center;padding:30px 10px;background:var(--pale);border:3px solid var(--line);border-radius:16px;font-size:42px;font-weight:800;text-align:center;line-height:1.28;word-break:keep-all}.arrow{align-self:center;font-size:56px;color:var(--magenta);font-weight:800}
-.flow .step{min-width:0;font-size:38px;padding:26px 16px;word-break:auto-phrase}.flow .arrow{flex:none}
+.flow .step{min-width:0;font-size:40px;padding:34px 20px;word-break:auto-phrase;line-height:1.3}.flow .arrow{flex:none}
 /* rows */
 .row{display:grid;grid-template-columns:270px 1fr;gap:26px;align-items:center;padding:24px 26px;font-size:54px;font-weight:800;line-height:1.25}
 .row .rk{font-size:42px;color:var(--purple)}.row .rk.mg{color:var(--magenta)}.row.sub{margin-bottom:28px;background:#fbeef3;border-radius:14px;color:var(--magenta)}
@@ -40,7 +40,7 @@ body{background:#12101d;color:var(--ink);font-family:"BIZ UDPGothic","Yu Gothic"
 .mv{font-size:84px;font-weight:900;color:var(--magenta);line-height:1.1;letter-spacing:-.02em;white-space:nowrap}.ml{margin-top:14px;font-size:44px;font-weight:800;line-height:1.26}.msub{margin-top:10px;font-size:34px;font-weight:700;color:var(--muted);line-height:1.26}
 .two-m{margin-top:10px}.two-m .metric{min-height:0;padding:12px 24px;display:flex;align-items:center;gap:26px}.two-m .mv{font-size:76px}.two-m .ml{margin:0;font-size:40px}
 /* bars */
-.bar{display:grid;grid-template-columns:230px 1fr 130px;gap:12px;align-items:center;margin-bottom:22px}.bl{font-size:38px;font-weight:800}.bt{height:58px;background:#ececee;border-radius:6px;overflow:hidden}.bf{height:100%;background:#9a9a9a}.bf.mgb{background:var(--magenta)}.bv{font-size:40px;font-weight:900;text-align:right}.note{font-size:36px;font-weight:700;color:var(--muted);line-height:1.28;margin-top:6px}.bars2 .h3p{font-size:42px}
+.bar{display:grid;grid-template-columns:300px 1fr 140px;gap:12px;align-items:center;margin-bottom:22px}.bl{font-size:38px;font-weight:800}.bt{height:58px;background:#ececee;border-radius:6px;overflow:hidden}.bf{height:100%;background:#9a9a9a}.bf.mgb{background:var(--magenta)}.bv{font-size:40px;font-weight:900;text-align:right}.note{font-size:36px;font-weight:700;color:var(--muted);line-height:1.28;margin-top:6px}.bars2 .h3p{font-size:42px}
 /* box */
 .box{padding:22px 28px;font-size:46px;font-weight:800;line-height:1.3;background:#fff5da;margin-top:26px}
 .box.q{margin:0 0 30px;background:var(--pale)}.box.ng2{margin:0;background:#fbeef3}.box.ok2{margin:0;background:#e9f5ef}.down{text-align:center;font-size:64px;color:var(--magenta);font-weight:800;line-height:1.4}
@@ -152,32 +152,31 @@ body{background:#12101d;color:var(--ink);font-family:"BIZ UDPGothic","Yu Gothic"
 </style></head>
 <body data-start="10:00"><div id="stage"><div id="deck">
 <section class="slide title" data-title="表紙" data-sec="60" data-part="開始" data-steps="">
-<div class="title-band"></div>
-<div class="t-course">学会・講義名</div>
-<h1 class="t-main">HTMLで作る<br>発表スライドの見本</h1>
-<div class="t-foot">2026年1月1日　10:00〜10:30<br>所属　氏名</div>
-<aside class="notes">表紙です。ここに読み原稿を書くと、発表者用の画面（P キー）に表示されます。</aside></section>
-<section class="slide new" data-title="順に出す箇条書き" data-sec="90" data-part="本題" data-steps=".list li*">
-<div class="band">順に出す箇条書き</div><div class="body"><ul class="list big"><li>右矢印で1項目ずつ現れる</li><li>data-steps に出す順番を書く</li><li>Shift+右矢印で、次のスライドへ飛ぶ</li></ul></div>
-<div class="pg">2</div><aside class="notes">data-steps に「.list li*」と書くと、箇条書きが1つずつ現れます。
-〔操作：3回クリックしてから次へ〕</aside></section>
-<section class="slide new" data-title="数値と表" data-sec="90" data-part="本題" data-steps=".metric*">
-<div class="band">数値は元の資料からそのまま入れる</div><div class="body"><div class="metrics"><div class="metric"><div class="mv">1,234人</div><div class="ml">対象者</div><div class="msub">数字は現れるときにカウントアップする</div></div><div class="metric"><div class="mv">56.7%</div><div class="ml">割合の例</div><div class="msub">架空の値</div></div></div></div>
-<div class="src">出典の例：著者 A, et al. 雑誌名 2026;1:1</div><div class="pg">3</div><aside class="notes">.mv の数字は、現れるときに0から数えあがります。</aside></section>
-<section class="slide new" data-title="比べる表と入力" data-sec="120" data-part="本題" data-steps="">
-<div class="band">会場で入力する表</div><div class="body"><table class="tbl compare"><tr><th></th><th>例A</th><th>会場</th></tr><tr><td>質問1</td><td>40%</td><td><input aria-label="会場の値1"></td></tr><tr><td>質問2</td><td>60%</td><td><input aria-label="会場の値2"></td></tr></table></div>
-<div class="pg">4</div><aside class="notes">入力欄の値は聴衆画面のブラウザに保存され、発表者画面とも同期します。</aside></section>
-<section class="slide new" data-title="流れを順に出す" data-sec="60" data-part="本題" data-steps=".flow .step*">
-<div class="band">流れを順に出す</div><div class="body"><div class="flow"><div class="step">聴き手を決める</div><div class="arrow">→</div><div class="step">読み原稿を書く</div><div class="arrow">→</div><div class="step">スライドに切り出す</div><div class="arrow">→</div><div class="step">HTMLで発表</div></div><div class="tail">右矢印を押すたびに、矢印と箱が1つずつ現れる</div></div>
-<div class="pg">5</div><aside class="notes">data-steps に「.flow .step*」と書くと、箱が1つずつ現れ、直前の矢印も一緒に出ます。</aside></section>
-<section class="slide new" data-title="棒が伸びる" data-sec="60" data-part="本題" data-steps=".bar*">
-<div class="band">棒が伸び、数字が数えあがる</div><div class="body"><div class="bar"><div class="bl">項目A</div><div class="bt"><div class="bf" style="width:38%"></div></div><div class="bv">38%</div></div><div class="bar"><div class="bl">項目B</div><div class="bt"><div class="bf" style="width:57%"></div></div><div class="bv">57%</div></div><div class="bar"><div class="bl">項目C</div><div class="bt"><div class="bf mgb" style="width:82%"></div></div><div class="bv">82%</div></div><div class="tail">架空の値</div></div>
-<div class="pg">6</div><aside class="notes">.bf の style に width を書くと、現れるときに棒がその長さまで伸びます。.bv の数字は0から数えあがります。</aside></section>
-<section class="slide new" data-title="線を引いて言い直す" data-sec="60" data-part="本題" data-steps=".rd*|.fix">
-<div class="band">線を引いて言い直す</div><div class="body"><ul class="list big"><li><span class="rd">スライドから作る</span></li><li><span class="rd">箇条書きを並べる</span></li><li class="fix"><span class="mg">読み原稿から作り、1枚1メッセージにする</span></li></ul></div>
+<div class="t-course">学会名・講義名</div>
+<h1 class="t-main">外来で説明資料を<br>事前に渡す取り組み</h1>
+<div class="t-foot">2026年1月1日　10:00〜10:30<br>所属　氏名（内容はすべて架空の見本）</div>
+<aside class="notes">表紙です。ここに読み原稿を書くと、P キーで開く発表者用の画面に出ます。</aside></section>
+<section class="slide new" data-title="背景" data-sec="90" data-part="本題" data-steps=".list li*">
+<div class="band">背景</div><div class="body"><ul class="list big"><li>外来の待ち時間が長い</li><li>診察で説明する時間が足りない</li><li>説明資料を事前に渡せないか</li></ul></div>
+<div class="pg">2</div><aside class="notes">箇条書きは右矢印で1行ずつ現れます（data-steps=".list li*"）。
+〔操作：3回送ってから次へ〕</aside></section>
+<section class="slide new" data-title="対象" data-sec="60" data-part="本題" data-steps=".metric*">
+<div class="band">対象</div><div class="body"><div class="metrics"><div class="metric"><div class="mv">1,234人</div><div class="ml">外来患者</div><div class="msub">2025年4月〜9月</div></div><div class="metric"><div class="mv">56.7%</div><div class="ml">回答率</div><div class="msub">700人が回答</div></div></div></div>
+<div class="src">数値はすべて架空</div><div class="pg">3</div><aside class="notes">大きな数字（.mv）は、現れるときに0から数えあがります。</aside></section>
+<section class="slide new" data-title="方法" data-sec="60" data-part="本題" data-steps=".flow .step*">
+<div class="band">方法</div><div class="body"><div class="flow"><div class="step">資料を作る</div><div class="arrow">→</div><div class="step">受診前に渡す</div><div class="arrow">→</div><div class="step">外来で質問を受ける</div><div class="arrow">→</div><div class="step">アンケート</div></div></div>
+<div class="pg">4</div><aside class="notes">流れ図は、右矢印を押すたびに矢印と箱が1つずつ現れます（data-steps=".flow .step*"）。</aside></section>
+<section class="slide new" data-title="結果" data-sec="60" data-part="本題" data-steps=".bar*">
+<div class="band">結果</div><div class="body"><div class="bar"><div class="bl">理解できた</div><div class="bt"><div class="bf mgb" style="width:82%"></div></div><div class="bv">82%</div></div><div class="bar"><div class="bl">質問できた</div><div class="bt"><div class="bf" style="width:57%"></div></div><div class="bv">57%</div></div><div class="bar"><div class="bl">待合で読んだ</div><div class="bt"><div class="bf" style="width:38%"></div></div><div class="bv">38%</div></div></div>
+<div class="src">回答者700人に占める割合（架空）</div><div class="pg">5</div><aside class="notes">棒は .bf の style に書いた長さまで伸び、右の数字は数えあがります。</aside></section>
+<section class="slide new" data-title="会場への問い" data-sec="120" data-part="本題" data-steps="">
+<div class="band">会場への問い</div><div class="body"><table class="tbl compare"><tr><th></th><th>本研究</th><th>会場</th></tr><tr><td>資料を事前に渡している</td><td>100%</td><td><input aria-label="会場の値1"></td></tr><tr><td>外来で質問を受けている</td><td>57%</td><td><input aria-label="会場の値2"></td></tr></table></div>
+<div class="pg">6</div><aside class="notes">入力欄に会場の挙手の数などを入れると、ブラウザに保存され、発表者の画面にも同じ値が出ます。</aside></section>
+<section class="slide new" data-title="考察" data-sec="90" data-part="本題" data-steps=".rd*|.fix">
+<div class="band">考察</div><div class="body"><ul class="list big"><li><span class="rd">資料を渡せば説明は要らない</span></li><li><span class="rd">説明の時間を短くできる</span></li><li class="fix"><span class="mg">資料をもとに、質問の時間をつくる</span></li></ul></div>
 <div class="pg">7</div><aside class="notes">.rd を付けた語は、順番が来ると線が引かれて薄くなります。最後に言い直しの行が現れます。</aside></section>
-<section class="slide divider" data-title="区切り" data-sec="30" data-part="まとめ" data-steps=""><div class="dv"><h2>まとめ</h2></div><aside class="notes">区切りのスライドです。</aside></section>
-<section class="slide new" data-title="キー操作" data-sec="60" data-part="まとめ" data-steps="">
+<section class="slide divider" data-title="まとめ" data-sec="30" data-part="まとめ" data-steps=""><div class="dv"><h2>まとめ</h2><p>資料は、質問の時間をつくるために渡す</p></div><aside class="notes">区切りのスライドです。</aside></section>
+<section class="slide new" data-title="キー操作" data-sec="60" data-part="付録" data-steps="">
 <div class="band">キー操作</div><div class="body"><table class="tbl"><tr><td class="b">→ / ←</td><td>次へ / 前へ（要素を1つずつ）</td></tr><tr><td class="b">P</td><td>発表者用の画面を開く</td></tr><tr><td class="b">O</td><td>全スライドの一覧</td></tr><tr><td class="b">N / F</td><td>原稿の表示 / 全画面</td></tr></table></div>
 <div class="pg">9</div><aside class="notes">最後のスライドです。</aside></section>
 <div id="laser"></div></div></div>
