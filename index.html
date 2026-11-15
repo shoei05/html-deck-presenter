@@ -31,6 +31,7 @@ body{background:#12101d;color:var(--ink);font-family:"BIZ UDPGothic","Yu Gothic"
 .three-t td.b{width:30%;text-align:center;color:#fff;font-size:54px}.three-t td{font-size:54px;padding:30px 28px}.ok{background:var(--green)}.warn{background:var(--amber)}.ng{background:var(--magenta)}
 /* flow */
 .flow{display:flex;align-items:stretch;gap:14px;margin:6px 0 40px}.step{flex:1;display:grid;place-items:center;padding:30px 10px;background:var(--pale);border:3px solid var(--line);border-radius:16px;font-size:42px;font-weight:800;text-align:center;line-height:1.28;word-break:keep-all}.arrow{align-self:center;font-size:56px;color:var(--magenta);font-weight:800}
+.flow .step{min-width:0;font-size:38px;padding:26px 16px;word-break:auto-phrase}.flow .arrow{flex:none}
 /* rows */
 .row{display:grid;grid-template-columns:270px 1fr;gap:26px;align-items:center;padding:24px 26px;font-size:54px;font-weight:800;line-height:1.25}
 .row .rk{font-size:42px;color:var(--purple)}.row .rk.mg{color:var(--magenta)}.row.sub{margin-bottom:28px;background:#fbeef3;border-radius:14px;color:var(--magenta)}
@@ -39,7 +40,7 @@ body{background:#12101d;color:var(--ink);font-family:"BIZ UDPGothic","Yu Gothic"
 .mv{font-size:84px;font-weight:900;color:var(--magenta);line-height:1.1;letter-spacing:-.02em;white-space:nowrap}.ml{margin-top:14px;font-size:44px;font-weight:800;line-height:1.26}.msub{margin-top:10px;font-size:34px;font-weight:700;color:var(--muted);line-height:1.26}
 .two-m{margin-top:10px}.two-m .metric{min-height:0;padding:12px 24px;display:flex;align-items:center;gap:26px}.two-m .mv{font-size:76px}.two-m .ml{margin:0;font-size:40px}
 /* bars */
-.bar{display:grid;grid-template-columns:230px 1fr 130px;gap:12px;align-items:center;margin-bottom:22px}.bl{font-size:38px;font-weight:800}.bt{height:58px;background:#efecf2;border-radius:6px;overflow:hidden}.bf{height:100%;background:#7a6f9a}.bf.mgb{background:var(--magenta)}.bv{font-size:40px;font-weight:900;text-align:right}.note{font-size:36px;font-weight:700;color:var(--muted);line-height:1.28;margin-top:6px}.bars2 .h3p{font-size:42px}
+.bar{display:grid;grid-template-columns:230px 1fr 130px;gap:12px;align-items:center;margin-bottom:22px}.bl{font-size:38px;font-weight:800}.bt{height:58px;background:#ececee;border-radius:6px;overflow:hidden}.bf{height:100%;background:#9a9a9a}.bf.mgb{background:var(--magenta)}.bv{font-size:40px;font-weight:900;text-align:right}.note{font-size:36px;font-weight:700;color:var(--muted);line-height:1.28;margin-top:6px}.bars2 .h3p{font-size:42px}
 /* box */
 .box{padding:22px 28px;font-size:46px;font-weight:800;line-height:1.3;background:#fff5da;margin-top:26px}
 .box.q{margin:0 0 30px;background:var(--pale)}.box.ng2{margin:0;background:#fbeef3}.box.ok2{margin:0;background:#e9f5ef}.down{text-align:center;font-size:64px;color:var(--magenta);font-weight:800;line-height:1.4}
@@ -166,10 +167,19 @@ body{background:#12101d;color:var(--ink);font-family:"BIZ UDPGothic","Yu Gothic"
 <section class="slide new" data-title="比べる表と入力" data-sec="120" data-part="本題" data-steps="">
 <div class="band">会場で入力する表</div><div class="body"><table class="tbl compare"><tr><th></th><th>例A</th><th>会場</th></tr><tr><td>質問1</td><td>40%</td><td><input aria-label="会場の値1"></td></tr><tr><td>質問2</td><td>60%</td><td><input aria-label="会場の値2"></td></tr></table></div>
 <div class="pg">4</div><aside class="notes">入力欄の値は聴衆画面のブラウザに保存され、発表者画面とも同期します。</aside></section>
+<section class="slide new" data-title="流れを順に出す" data-sec="60" data-part="本題" data-steps=".flow .step*">
+<div class="band">流れを順に出す</div><div class="body"><div class="flow"><div class="step">聴き手を決める</div><div class="arrow">→</div><div class="step">読み原稿を書く</div><div class="arrow">→</div><div class="step">スライドに切り出す</div><div class="arrow">→</div><div class="step">HTMLで発表</div></div><div class="tail">右矢印を押すたびに、矢印と箱が1つずつ現れる</div></div>
+<div class="pg">5</div><aside class="notes">data-steps に「.flow .step*」と書くと、箱が1つずつ現れ、直前の矢印も一緒に出ます。</aside></section>
+<section class="slide new" data-title="棒が伸びる" data-sec="60" data-part="本題" data-steps=".bar*">
+<div class="band">棒が伸び、数字が数えあがる</div><div class="body"><div class="bar"><div class="bl">項目A</div><div class="bt"><div class="bf" style="width:38%"></div></div><div class="bv">38%</div></div><div class="bar"><div class="bl">項目B</div><div class="bt"><div class="bf" style="width:57%"></div></div><div class="bv">57%</div></div><div class="bar"><div class="bl">項目C</div><div class="bt"><div class="bf mgb" style="width:82%"></div></div><div class="bv">82%</div></div><div class="tail">架空の値</div></div>
+<div class="pg">6</div><aside class="notes">.bf の style に width を書くと、現れるときに棒がその長さまで伸びます。.bv の数字は0から数えあがります。</aside></section>
+<section class="slide new" data-title="線を引いて言い直す" data-sec="60" data-part="本題" data-steps=".rd*|.fix">
+<div class="band">線を引いて言い直す</div><div class="body"><ul class="list big"><li><span class="rd">スライドから作る</span></li><li><span class="rd">箇条書きを並べる</span></li><li class="fix"><span class="mg">読み原稿から作り、1枚1メッセージにする</span></li></ul></div>
+<div class="pg">7</div><aside class="notes">.rd を付けた語は、順番が来ると線が引かれて薄くなります。最後に言い直しの行が現れます。</aside></section>
 <section class="slide divider" data-title="区切り" data-sec="30" data-part="まとめ" data-steps=""><div class="dv"><h2>まとめ</h2></div><aside class="notes">区切りのスライドです。</aside></section>
 <section class="slide new" data-title="キー操作" data-sec="60" data-part="まとめ" data-steps="">
 <div class="band">キー操作</div><div class="body"><table class="tbl"><tr><td class="b">→ / ←</td><td>次へ / 前へ（要素を1つずつ）</td></tr><tr><td class="b">P</td><td>発表者用の画面を開く</td></tr><tr><td class="b">O</td><td>全スライドの一覧</td></tr><tr><td class="b">N / F</td><td>原稿の表示 / 全画面</td></tr></table></div>
-<div class="pg">6</div><aside class="notes">最後のスライドです。</aside></section>
+<div class="pg">9</div><aside class="notes">最後のスライドです。</aside></section>
 <div id="laser"></div></div></div>
 <div id="overview"></div><div id="notespanel"></div><div id="controls"><button data-a="prev">◀</button><span id="counter"></span><button data-a="next">▶</button></div>
 <script>'use strict';
